@@ -11,22 +11,27 @@
     <title>My Task Planner</title>
   </head>
   <body>
- 
-    <h1 style="text-align:center">Task List</h1>
-  </div>
+    <div class="jumbotron">
+      <div >
+      <img src="https://www.pngkey.com/png/full/67-671833_form-application-test-clipboard-check-list-tasks-audit.png" style="display: block; margin-left: auto; margin-right: auto;" alt="List of Tasks" width="70" height="85">
+      </div>
+      <h1 style="text-align:center">Task List</h1>
+    </div>
+      
 
-  <div class="container">
-    <div class="row">
-        <div class="col">
+    <div class="container">
+      <div class="row">
+          <div class="col">
+            
     <div class="container">
       <!-- Trigger the modal with a button -->
-      <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#myModal">Add New Task</button>
+      <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#myModal">Add New Task</button><br><br>
     
       <!-- Modal -->
       <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog">
         
-          <!-- Modal content-->
+          <!-- Modal add form-->
           <div class="modal-content">
             <div class="modal-header">
               <h4 class="modal-title">Add Task</h4>
@@ -43,18 +48,18 @@
                       <label for="newTaskDescription">Description</label>
                       <textarea type="text" class="form-control" id="newTaskDescription"></textarea>
                   </div>
-                  <div class="form-group">
+                <div class="form-group">
                      
                           <label for="newTaskAssignedTo">Assigned to</label>
                           <input type="text" class="form-control" id="newTaskAssignedTo">
-                      </div>
-                      <div class="form-group">
-                          <label for="newTaskDueDate">Due Date</label>
-                          <input type="date" class="form-control" id="newTaskDueDate">
-                      </div>
+                  </div>
+                <div class="form-group">
+                        <label for="newTaskDueDate">Due Date</label>
+                        <input type="date" class="form-control" id="newTaskDueDate">
+                </div>
                      
-                   <div class="form-group">
-                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+               <div class="form-group">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                           Status
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -64,15 +69,18 @@
                           <a class="dropdown-item" href="#">Done</a>
                       </div>
                       </div> 
-
-                       <div>
-                   <button type="button" class="btn btn-success">Submit</button>
-                  <button type="button" class="btn btn-danger">Reset</button>
-                    </div>
-                    </form>
+                  <div>
+                   <button type="submit" class="btn btn-success">Submit</button>
+                  <button type="reset" class="btn btn-danger">Reset</button>
+                  </div>
+                  </form>
                      
-                </div>
-                
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <!-- Task card content-->
     <ul class="list-group" id="tasksList">
                    
@@ -158,27 +166,17 @@
                
       </div>
     </div>
-   </div>
-  </div>
-      
-    </div>
-
   </div>
 </div>
-</div>
-</div>
 
 
-</div>
-</div>
+  </div>
+ </div>
 </div>
 
-    <!-- Optional JavaScript -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  </body>
+</body>
 </html>
-    
