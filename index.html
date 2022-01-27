@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,9 +8,6 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-
-    <!-- JavaScript-->
-    <script src="js/index.js"></script>
 
     <title>My Task Planner</title>
   </head>
@@ -45,25 +43,41 @@
                 <form id="newTask">
                   <div class="form-group">
                       <label for="taskname">Name</label>
-                      <input type="text" class="form-control" id="taskname" placeholder="Name of the task">
+                      <input type="text" class="form-control" id="taskname" placeholder="Name of the task" required>
+                      <div class="valid-feedback">Looks good!</div>
+                      <div class="invalid-feedback">
+                        Please provide a valid name.
+                      </div>
                   </div>
                   <div class="form-group">
                       <label for="description">Description</label>
-                      <textarea type="text" class="form-control" id="description" placeholder="Description of the task"></textarea>
-                  </div>
+                      <textarea type="text" class="form-control" id="description" placeholder="Description of the task" required ></textarea>
+                      <div class="invalid-feedback">
+                        <div class="valid-feedback">Looks good!</div>
+                        Please provide a valid description
+                      </div>
+                    </div>
                 <div class="form-group">
                      
                           <label for="assignedto">Assigned to</label>
-                          <input type="text" class="form-control" id="assignedto" placeholder="Person this task has been assigned to">
-                  </div>
+                          <input type="text" class="form-control" id="assignedto" placeholder="Person this task has been assigned to" required>
+                          <div class="valid-feedback">Looks good!</div>
+                          <div class="invalid-feedback">
+                            Please provide a valid name.
+                          </div>
+                        </div>
                 <div class="form-group">
                         <label for="duedate">Due date</label>
                         <input type="date" class="form-control" id="duedate">
+                        <div class="valid-feedback">Looks good!</div>
+                <div class="invalid-feedback">
+                  Please provide a valid date.
+                </div>
                 </div>
                      
-                <div class="form-group">
+                <div class="form-group stat-1">
                   <label for="status">Status</label>
-                  <select class="form-control" id="status">
+                  <select class="form-control group-2-toggle" id="status">
                     <option value="todo">TO-DO</option>
                       <option value="inprogress">IN PROGRESS</option>
                       <option value="review">REVIEW</option>
@@ -73,9 +87,9 @@
                   
                 </div>
 
-                  <div class="modal-footer">
-                    <button type="reset" value="Reset" class="btn btn-danger">RESET</button>
-                    <button type="submit" value="Submit" class="btn btn-success">SUBMIT</button>
+                  <div class="modal-footer dal-2">
+                    <button type="reset" value="Reset" class="btn run-10 btn-danger">RESET</button>
+                    <button type="submit" value="Submit" class="btn run-9 btn-success">SUBMIT</button>
                 </div>
                   </form>
                      
@@ -196,9 +210,9 @@
                 <input type="date" class="form-control" id="duedate">
         </div>
                
-        <div class="form-group">
+        <div class="form-group stat-form">
           <label for="status">Status</label>
-          <select class="form-control" id="status">
+          <select class="form-control group-3-toggle" id="status">
             <option value="todo">TO-DO</option>
               <option value="inprogress">IN PROGRESS</option>
               <option value="review">REVIEW</option>
@@ -209,9 +223,9 @@
          
       </div>
 
-      <div class="modal-footer">
-        <button type="reset" value="Reset" class="btn btn-danger">RESET</button>
-        <button type="submit" value="Submit" class="btn btn-success">SUBMIT</button>
+      <div class="modal-footer dal-2">
+        <button type="reset" value="Reset" class="btn run-12 btn-danger">RESET</button>
+        <button type="submit" value="Submit" class="btn run-5 btn-success">SUBMIT</button>
     </div>
             </form>
                
