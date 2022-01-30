@@ -1,4 +1,4 @@
-const taskManager=new TaskManager(0);
+const taskManager = new TaskManager(0);
 
 const dateElement = document.querySelector("#date-element");
 //get the current date from the DateObject
@@ -23,7 +23,7 @@ form.addEventListener("submit", (event) => {
   let validationFail = 0;
 
   event.preventDefault();
-  
+
   console.log("Task Name :" + validateName.value.length);
   console.log("Task Description :" + validateDescription.value.length);
   console.log("Task Assigned To :" + validateAssignedTo.value.length);
@@ -112,14 +112,6 @@ form.addEventListener("submit", (event) => {
     validationFail++;
   }
 
-  if (validateAssignedTo.value) {
-    validateAssignedTo.classList.add("is-valid");
-    validateAssignedTo.classList.remove("is-invalid");
-  } else {
-    validateAssignedTo.classList.add("is-invalid");
-    validateAssignedTo.classList.remove("is-valid");
-    validationFail++;
-  }
   // If validation fails then function will not proceed further and
   // will return. The value of validationFail will also needed to be
   // reset to 0.
@@ -137,10 +129,10 @@ form.addEventListener("submit", (event) => {
       validateDueDate.value,
       validateStatus.value
     );
-   
+
     clearFormFields();
     taskManager.render();
-   
+
   }
- 
+
 });
