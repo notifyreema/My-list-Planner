@@ -34,7 +34,7 @@ form.addEventListener("submit", (event) => {
     validateName.value = "";
     validateDescription.value = "";
     validateAssignedTo.value = "";
-    validateStatus.value = "In Progress";
+    validateStatus.value = "";
     validateDueDate.value = "";
     validateName.classList.remove("is-valid");
     validateDescription.classList.remove("is-valid");
