@@ -2,13 +2,10 @@ const taskManager = new TaskManager(0);
 
 const dateElement = document.querySelector("#date-element");
 //get the current date from the DateObject
-let todaysDate = new Date(Date.now())
-  .toLocaleString()
-  .split(",")[0]
-  .split("/");
-let day = todaysDate[0];
-let month = todaysDate[1];
-let year = todaysDate[2];
+var dateObj = new Date();
+var month = dateObj.getUTCMonth() + 1; // Month from 1-12
+var day = dateObj.getUTCDate();
+var year = dateObj.getUTCFullYear();
 let dateString = `Today Date: ${day} / ${month} / ${year}`;
 dateElement.innerHTML = dateString;
 
