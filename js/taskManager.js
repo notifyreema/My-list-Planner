@@ -1,6 +1,6 @@
-const createTaskHtml = (name, description, assignedTo, dueDate, status) => {
-  const html = `<li class="list-group-item">
-  <div class="d-flex w-500 mt-2 justify-content-between align-items-center">
+const createTaskHtml = (id,name, description, assignedTo, dueDate, status) => {
+  const html = `<li class="list-group-item" data-task-id="${id}">
+  <div class="d-flex w-500 mt-2 justify-content-between align-items-center" >
     <h5 class="card-title"> Name : ${name}</h5>
     <span class="badge badge-info"> ${status}</span>
     </div>
@@ -11,12 +11,16 @@ const createTaskHtml = (name, description, assignedTo, dueDate, status) => {
     <p class="card-text">
       Description : ${description}
     </p>
-   
-    <p>
-    <button type="button" class="btn btn-primary btn-sm" data-toggle="modal"
-    data-target="#editForm">EDIT</button>
-  <button class="delete btn btn-danger btn-sm" name="delete">DELETE</button>
-</p>
+<div class="card-footer row">
+<div class='myDiv'>
+<button class="btn btn-outline-success done-button" style='margin-right:16px'>
+Done
+</button>
+<button class="btn btn-outline-danger delete-button" style='margin-right:16px'>
+  Delete
+</button>  
+</div>
+</div>
 </li>`;
   return html;
 };
@@ -27,6 +31,7 @@ class TaskManager {
     console.log("inside constructor");
     this.tasks = [];
     this.currentId = currentId;
+  
   }
 
   // Create the addTask method
@@ -48,6 +53,28 @@ class TaskManager {
 
   }
 
+  getTaskById(taskId) {
+    // Create a variable to store the found task
+    let foundTask;
+    
+    // Loop over the tasks and find the task with the id passed as a parameter
+    for (let i = 0; i < this.tasks.length; i++) {
+      
+      // Get the current task in the loop
+      const task = this.tasks[i];
+      // Check if its the right task by comparing the task's id to the id passed as a parameter
+      if (task.id === taskId) {
+        console.log("inside if block")
+        // Store the task in the foundTask variable
+        foundTask = task;
+      }
+    }
+    // Return the found task
+    return foundTask;
+  }
+
+
+
   render() {
     let tasksHtmlList = [];
     // Loop over our tasks and create the html, storing it in the array
@@ -64,6 +91,7 @@ class TaskManager {
         date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
       // Create the task html
       const taskHtml = createTaskHtml(
+        task.id,
         task.name,
         task.description,
         task.assignedTo,
