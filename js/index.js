@@ -119,6 +119,9 @@ form.addEventListener("submit", (event) => {
   }
   else {
     // Push the valid input into our tasks array
+
+    console.log("Status :"+validateStatus.value);
+
     taskManager.addTask(
       validateName.value,
       validateDescription.value,
@@ -133,23 +136,39 @@ form.addEventListener("submit", (event) => {
   }
 
 });
+
+
+//const article = document.querySelector('#task-id');
+// The following would also work:
+// const article = document.getElementById("electric-cars")
+
+//console.log("ATTRIBUTE :"+article.dataset.validateName); // "3"
+
+
+
 const taskList = document.querySelector("#task-list");
 // Add an 'onclick' event listener to the Tasks List
 taskList.addEventListener("click", (event) => {
   // Check if a "Mark As Done" button was clicked
+
   if (event.target.classList.contains("done-button")) {
     // Get the correct parent Task, yours might be slightly different
     // Use console.log(event.target.parentElement) to see
+   
     const parentTask =
-      event.target.parentElement.parentElement.parentElement.parentElement;
+      event.target.parentElement.parentElement.parentElement;
+
+    
     // Get the taskId of the parent Task and turn it into a number.
     const taskId = Number(parentTask.dataset.taskId);
     // Get the task from the TaskManager using the taskId
-    const task = taskManager.getTaskById(0);
+    console.log("taskId is : "+taskId)
+    const task = taskManager.getTaskById(taskId);
     // Update the task status to 'DONE'
     task.status = "Done";
 
     // Render the tasks
     taskManager.render();
   }
+  
 });
