@@ -26,11 +26,11 @@ form.addEventListener("submit", (event) => {
 
   event.preventDefault();
 
-  console.log("Task Name :" + validateName.value.length);
-  console.log("Task Description :" + validateDescription.value.length);
-  console.log("Task Assigned To :" + validateAssignedTo.value.length);
-  console.log("Task Due Date :" + validateDueDate.value);
-  console.log("Task Status :" + validateStatus.value);
+  console.log("Task Name:" + validateName.value.length);
+  console.log("Task Description:" + validateDescription.value.length);
+  console.log("Task Assigned to:" + validateAssignedTo.value.length);
+  console.log("Task Due date:" + validateDueDate.value);
+  console.log("Task Status:" + validateStatus.value);
 
   // taskDueDate is in yyyy-mm-dd format
   let taskDueDate = validateDueDate.value.split("-");
