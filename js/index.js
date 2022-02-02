@@ -11,7 +11,7 @@ var dateObj = new Date();
 var month = dateObj.getUTCMonth() + 1; // Month from 1-12
 var day = dateObj.getUTCDate();
 var year = dateObj.getUTCFullYear();
-let dateString = `Today's Date: ${day} / ${month} / ${year}`;
+let dateString = `Today's date: ${day} / ${month} / ${year}`;
 dateElement.innerHTML = dateString;
 
 const form = document.querySelector("#addForm");
