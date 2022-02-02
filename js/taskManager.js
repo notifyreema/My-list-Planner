@@ -17,6 +17,9 @@ const createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {
     <button type= "button" class="btn btn-outline-success done-button" style='margin-right:16px'>
    DONE
  </button>
+ <button type= "button" class="btn btn-outline-primary edit-button" style='margin-right:16px'>
+ EDIT
+</button>
  <button type="button" class="btn btn-outline-danger delete-button" style='margin-right:16px'>
    DELETE
    </button>  
