@@ -11,7 +11,7 @@ var dateObj = new Date();
 var month = dateObj.getUTCMonth() + 1; // Month from 1-12
 var day = dateObj.getUTCDate();
 var year = dateObj.getUTCFullYear();
-let dateString = `Today's Date: ${day} / ${month} / ${year}`;
+let dateString = `Today Date: ${day} / ${month} / ${year}`;
 dateElement.innerHTML = dateString;
 
 const form = document.querySelector("#addForm");
@@ -30,7 +30,7 @@ form.addEventListener("submit", (event) => {
   console.log("Task Description :" + validateDescription.value.length);
   console.log("Task Assigned To :" + validateAssignedTo.value.length);
   console.log("Task Due Date :" + validateDueDate.value);
-  console.log("Task Status :" + validateStatus.value);
+  console.log("Task Status:" + validateStatus.value);
 
   // taskDueDate is in yyyy-mm-dd format
   let taskDueDate = validateDueDate.value.split("-");
@@ -125,7 +125,7 @@ form.addEventListener("submit", (event) => {
   else {
     // Push the valid input into our tasks array
 
-    console.log("Status:"+validateStatus.value);
+    console.log("Status :"+validateStatus.value);
 
     taskManager.addTask(
       validateName.value,
@@ -171,7 +171,7 @@ taskList.addEventListener("click", (event) => {
 
     const task = taskManager.getTaskById(taskId);
     // Update the task status to 'DONE'
-    task.status = "DONE";
+    task.status = "Done";
 
     // Render the tasks
     taskManager.render();
