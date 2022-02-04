@@ -1,8 +1,17 @@
 const createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {
+ let doneHtml = "";
+
+  if (status != "DONE") {
+
+    doneHtml = ` <button type= "button" class="btn btn-outline-success done-button" style='margin-right:16px'>
+  Mark As Done
+</button>`
+  }
+
   const html = `<li class="card mb-3" data-task-id="${id}" style="min-width: 50vw">
 <div class="container h-100" >
   <div class="d-flex w-500 mt-2 justify-content-between align-items-center" >
-    <h5 class="card-title">Name: ${name}</h5>
+    <h5 class="card-title"> Name: ${name}</h5>
     <span class="badge badge-info">${status}</span>
   </div>
   <p class="card-text">
@@ -14,9 +23,8 @@ const createTaskHtml = (id, name, description, assignedTo, dueDate, status) => {
   </div>
  
     <div class="card-footer row" >
-    <button type= "button" class="btn btn-outline-success done-button" style='margin-right:16px'>
-   MARK AS DONE
- </button>
+   
+ ${doneHtml}
  <button type="button" class="btn btn-outline-danger delete-button" style='margin-right:16px'>
    DELETE
    </button>  
